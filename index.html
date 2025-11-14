@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rafishdar/Tu Aplicacion de Pesca</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav class="topheader">
+      <a href="" class="logo">
+        <img width="60" height="60" src="imagenes/banco.png" alt="" />
+      </a>
+
+      <ul class="Menu-Horizontal">
+        <li>
+          <a href="">Productos</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Cuentas de Ahorro</a></li>
+            <li><a href="">Créditos Personales</a></li>
+            <li><a href="">Créditos Hipotecarios</a></li>
+            <li><a href="">Seguros</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="">Promociones</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Tarjeta de Crédito</a></li>
+            <li><a href="">Tarjeta de Débito</a></li>
+            <li><a href="">Beneficios por Viaje</a></li>
+            <li><a href="">Plin</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="">Zona Digital</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">App Móvil</a></li>
+            <li><a href="">Banca por Internet</a></li>
+            <li><a href="">Token Digital</a></li>
+            <li><a href="">Pagos QR</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="">Contáctanos</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Agencias</a></li>
+            <li><a href="">Teléfonos</a></li>
+            <li><a href="">Soporte en Línea</a></li>
+            <li><a href="">Libro de Reclamaciones</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="Seccion-Productos">
+      <div class="div-general-producto">
+        <div class="div-producto-texto">
+          <h2>Seccion Productos</h2>
+          <p>
+            En nuestra sección de Productos se reúne todos los servicios
+            financieros que el banco ofrece, organizados de forma clara para que
+            el usuario pueda explorarlos, compararlos y entender cuál se ajusta
+            mejor a sus necesidades. Su propósito es brindar información
+            detallada y accesible sobre cada producto, permitiendo tomar
+            decisiones financieras seguras y bien informadas.
+          </p>
+        </div>
+        <div class="div-producto-imagen">
+          <img src="imagenes/carrito.png" />
+        </div>
+      </div>
+    </section>
+    <section class="Seccion-Promociones">
+      <div class="div-general-promociones">
+        <div class="div-promociones-texto">
+          <h2>Seccion Promociones</h2>
+          <p>
+            En nuestra seccion Promociones los usuarios pueden encontrar manera
+            rápida y organizada todos los beneficios exclusivos que su banco
+            pone a su alcance. Aquí se agrupan diversas ofertas y campañas
+            especiales relacionadas con los principales productos y servicios
+            financieros, permitiendo al usuario aprovechar descuentos,
+            recompensas y oportunidades según sus necesidades.
+          </p>
+        </div>
+        <div class="div-producto-imagen">
+          <img src="imagenes/promociones.png" />
+        </div>
+      </div>
+    </section>
+
+    <section class="Seccion-Zona-Digital">
+      <div class="div-gral-zondig">
+        <div class="div-prod-texto">
+          <h2>Seccion Zona Digital</h2>
+          <p>
+            En nuestra sección de Zona Digital agrupa todas las herramientas
+            tecnológicas del banco que facilitan la vida del usuario,
+            permitiéndole realizar operaciones de manera rápida, segura y sin
+            necesidad de acudir a una agencia. Su enfoque es potenciar la
+            autogestión y ofrecer soluciones digitales modernas.
+          </p>
+        </div>
+
+        <div class="div-zondig-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/kBX9gerO7cY?si=C0XtQ9WBHg7S4WbO"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <section class="Seccion-Contactanos">
+      <div class="div-general-contactanos">
+        <div class="div-contactanos-texto">
+          <h2>Seccion Contactanos</h2>
+          <p>
+            En la seccion de Contáctanos permitmos que los usuarios se
+            comuniquen directamente con el banco de forma rápida, segura y desde
+            cualquier lugar. Su objetivo es ofrecer diferentes canales de
+            atención para resolver dudas, recibir apoyo y gestionar cualquier
+            consulta relacionada con productos o servicios.
+          </p>
+        </div>
+        <div class="div-producto-imagen">
+          <img src="imagenes/contactar.png" />
+        </div>
+      </div>
+    </section>
+
+    <section class="Seccion-Formulario">
+      <div class="div-cont-formulario">
+        <h2>Formulario de ayuda</h2>
+        <p>Complete todos los campos</p>
+
+        <form class="Formulario-cliente">
+          <!--INPUT TEXT-->
+          <div class="Campo">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese su nombre completo"
+            />
+          </div>
+
+          <div class="Campo">
+            <label for="pais">País</label>
+            <select name="pais" id="pais">
+              <option value="">Seleccione un país</option>
+              <option value="Peru">Perú</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Brasil">Brasil</option>
+            </select>
+          </div>
+
+          <div class="Campo">
+            <label>Intereses:</label>
+            <ul class="Lista-Checkbox">
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="Intereses"
+                    value="Tarjetas de credito"
+                  />
+                  Tarjetas de credito</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="Intereses"
+                    value="Tarjetas de debito"
+                  />
+                  Tarjetas de debito</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="Intereses"
+                    value="Beneficios por ser consumidor"
+                  />
+                  Beneficios por ser consumidor</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="Intereses" value="Mas" />
+                  Más</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="Campo">
+            <label>Sexo:</label>
+            <ul class="Lista-Radio">
+              <li>
+                <label
+                  ><input type="radio" name="sexo" value="M" /> Masculino</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="radio" name="sexo" value="F" /> Femenino</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="radio" name="sexo" value="P" /> Prefiero no
+                  decirlo</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-brand">
+            <img src="imagenes/banco.png" alt="Logo" class="footer-logo" />
+            <p>BancoEconomico</p>
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="/Documentos/3.politica-privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <a href="#">Términos y Condiciones</a>
+            <a href="/Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+                alt="Facebook"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
+                alt="LinkedIn"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
+                alt="Twitter"
+                class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
