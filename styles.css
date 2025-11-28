@@ -1,3 +1,20 @@
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 h1 {
   text-decoration: underline;
   color: aqua;
@@ -20,11 +37,17 @@ h2 {
   z-index: 1000;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 .menu-Horizontal {
   list-style: none;
   display: flex;
   justify-content: space-around;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .menu-Horizontal li a {
@@ -49,9 +72,17 @@ h2 {
   display: block;
 }
 
+.Seccion-Productos,
+.Seccion-Promociones,
+.Seccion-Zona-Digital,
+.Seccion-Contactanos,
+.Seccion-Formulario {
+  background-color: white;
+  padding: 60px 20px;
+}
+
 .Seccion-Productos {
   padding: 100px 20px 60px 20px;
-  background-color: white;
 }
 
 .div-general-producto {
@@ -70,7 +101,6 @@ h2 {
   font-size: 16px;
   text-align: justify;
 }
-
 .div-producto-texto h2 {
   color: aqua;
 }
@@ -78,6 +108,7 @@ h2 {
 .div-producto-imagen img {
   width: 300px;
   max-width: 100%;
+  display: block;
 }
 
 .div-gral-zondig {
@@ -89,7 +120,6 @@ h2 {
   padding: 60px 20px;
   gap: 40px;
 }
-
 .div-zondig-video iframe {
   width: 100%;
   max-width: 560px;
@@ -103,7 +133,6 @@ h2 {
   justify-content: center;
   margin-bottom: 40px;
 }
-
 .div-cont-formulario {
   background-color: #ffffff;
   padding: 30px;
@@ -114,16 +143,15 @@ h2 {
   color: #0c3c78;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 .div-cont-formulario h2 {
   color: #0c3c78;
   margin-bottom: 10px;
 }
-.Seccion-Promociones {
-  padding: 60px 20px;
-  background-color: white;
-}
 
+.Seccion-Promociones {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .div-general-promociones {
   display: flex;
   justify-content: space-between;
@@ -132,7 +160,6 @@ h2 {
   margin: 0 auto;
   gap: 40px;
 }
-
 .div-promociones-texto {
   flex: 1;
   color: black;
@@ -140,15 +167,20 @@ h2 {
   font-size: 16px;
   text-align: justify;
 }
-
 .div-promociones-texto h2 {
   color: aqua;
 }
-.Seccion-Contactanos {
-  padding: 60px 20px;
-  background-color: white;
+
+.div-general-promociones .div-producto-imagen img {
+  width: 300px;
+  max-width: 100%;
+  display: block;
 }
 
+.Seccion-Contactanos {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .div-general-contactanos {
   display: flex;
   justify-content: space-between;
@@ -157,7 +189,6 @@ h2 {
   margin: 0 auto;
   gap: 40px;
 }
-
 .div-contactanos-texto {
   flex: 1;
   color: black;
@@ -165,55 +196,55 @@ h2 {
   font-size: 16px;
   text-align: justify;
 }
-
 .div-contactanos-texto h2 {
   color: aqua;
 }
+.div-general-contactanos .div-producto-imagen img {
+  width: 300px;
+  max-width: 100%;
+  display: block;
+}
+
+/* Campos y formulario (resto) */
 .Campo {
   background-color: #e8f0fe;
   padding: 0.938rem;
   border-radius: 8px;
   margin-bottom: 0.938rem;
 }
-
 .Formulario-cliente label {
   display: block;
   font-weight: 700;
   margin-bottom: 8px;
   color: #0c3c78;
 }
-
 .Formulario-cliente input[type="text"],
 .Formulario-cliente select {
   width: 100%;
   padding: 10px;
   border: 1px solid #1558b0;
   border-radius: 5px;
-  background-color: white;
+  background: white;
   color: #0c3c78;
   outline: none;
 }
-
 .Formulario-cliente input[type="text"]:focus,
 .Formulario-cliente select:focus {
   border-color: #1a73e8;
   box-shadow: 0 0 5px rgba(26, 115, 232, 0.5);
 }
-
 .Lista-Checkbox,
 .Lista-Radio {
   list-style: none;
   padding: 0.625rem;
   margin: 0;
-  background-color: #f4e8ff;
+  background: #f4e8ff;
   border-radius: 0.5rem;
 }
-
 .Lista-Checkbox li,
 .Lista-Radio li {
   margin-bottom: 5px;
 }
-
 .Formulario-cliente button {
   background-color: #1a73e8;
   color: white;
@@ -225,112 +256,184 @@ h2 {
   font-weight: bold;
   transition: background-color 0.3s;
 }
-
 .Formulario-cliente button:hover {
   background-color: #1558b0;
 }
 
-@media (max-width: 600px) {
-  .div-cont-formulario {
-    max-width: 90%;
-  }
-}
-.div-general-promociones,
-.div-general-contactanos {
-  flex-direction: column;
-  text-align: center;
-}
-
-.div-promociones-texto,
-.div-contactanos-texto {
-  text-align: justify;
-  width: 100%;
-}
-
-.div-promociones-imagen img,
-.div-contactanos-imagen img {
-  width: 70%;
-  max-width: 260px;
-  margin: 20px auto 0 auto;
-  display: block;
-}
 .footer {
   background-color: #1558b0;
   color: white;
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem;
   font-family: "Roboto", sans-serif;
+  width: 100%;
 }
-
 .footer-container {
   display: flex;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1.5rem;
-  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 0 20px;
 }
-
 .footer-brand {
   flex: 1;
   min-width: 200px;
 }
-
 .footer-logo {
   width: 60px;
   height: auto;
   margin-bottom: 0.5rem;
 }
-
 .footer-links {
   flex: 1;
   min-width: 200px;
 }
-
 .footer-links a {
   display: block;
   color: #ccc;
   text-decoration: none;
   margin: 0.3rem 0;
 }
-
 .footer-links a:hover {
   color: #fff;
 }
-
 .footer-social {
-  width: 100%;
-  max-width: 350px; /* opcional, solo para que quede bonito */
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
-
 .social-icon {
   width: 32px;
   height: 32px;
-  margin-right: 0.5rem;
   transition: transform 0.2s ease-in-out;
 }
-
 .social-icon:hover {
   transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
+  /* Header adjustments */
+  nav.topheader {
+    padding: 0 16px;
+    height: 60px;
+  }
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-Horizontal {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    width: auto;
+  }
+  .menu-Horizontal.active {
+    display: flex;
+  }
+
+  .footer {
+    padding: 1.5rem 1rem;
+  }
   .footer-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 12px;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 1.25rem;
+  }
+  .footer-brand,
+  .footer-links,
+  .footer-social {
+    width: 100%;
+    max-width: 480px;
   }
 
-  .footer-social img {
-    margin-bottom: 0.5rem;
-  }
-
+  /* Sections stack vertically on mobile */
   .div-general-producto,
-  .div-gral-zondig {
+  .div-gral-zondig,
+  .div-general-promociones,
+  .div-general-contactanos {
+    display: flex;
     flex-direction: column;
     text-align: center;
+    gap: 20px;
+    padding: 0 8px;
+  }
+
+  .div-producto-texto,
+  .div-promociones-texto,
+  .div-contactanos-texto,
+  .div-prod-texto {
+    width: 100%;
+    text-align: justify;
+  }
+
+  .div-general-promociones .div-producto-imagen img,
+  .div-general-contactanos .div-producto-imagen img,
+  .div-general-producto .div-producto-imagen img {
+    width: 70%;
+    max-width: 260px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .div-zondig-video iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+  .div-cont-formulario {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 769px) {
+  .div-general-promociones,
+  .div-general-contactanos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .div-promociones-texto,
+  .div-contactanos-texto {
+    flex: 1;
+  }
+
+  .div-general-promociones .div-producto-imagen img,
+  .div-general-contactanos .div-producto-imagen img {
+    width: 300px;
+    max-width: 100%;
+  }
+}
+
+/* Small screens tweak for form container */
+@media (max-width: 600px) {
+  .div-cont-formulario {
+    max-width: 90%;
   }
 }
