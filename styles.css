@@ -20,32 +20,32 @@ h2 {
   z-index: 1000;
 }
 
-.Menu-Horizontal {
+.menu-Horizontal {
   list-style: none;
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
 
-.Menu-Horizontal li a {
+.menu-Horizontal li a {
   display: block;
   padding: 15px 20px;
   color: black;
   text-decoration: none;
 }
-.Menu-Horizontal li a:hover {
+.menu-Horizontal li a:hover {
   color: red;
 }
 
-.Menu-Vertical {
+.menu-Vertical {
   list-style: none;
   padding: 0;
   position: absolute;
   display: none;
   width: 150px;
-  background-color: aqua;
+  background-color: white;
 }
-.Menu-Horizontal li:hover .Menu-Vertical {
+.menu-Horizontal li:hover .menu-Vertical {
   display: block;
 }
 
@@ -235,22 +235,43 @@ h2 {
     max-width: 90%;
   }
 }
+.div-general-promociones,
+.div-general-contactanos {
+  flex-direction: column;
+  text-align: center;
+}
 
+.div-promociones-texto,
+.div-contactanos-texto {
+  text-align: justify;
+  width: 100%;
+}
+
+.div-promociones-imagen img,
+.div-contactanos-imagen img {
+  width: 70%;
+  max-width: 260px;
+  margin: 20px auto 0 auto;
+  display: block;
+}
 .footer {
   background-color: #1558b0;
   color: white;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   font-family: "Roboto", sans-serif;
 }
 
 .footer-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
-  gap: 2rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  box-sizing: border-box;
 }
 
 .footer-brand {
@@ -281,8 +302,8 @@ h2 {
 }
 
 .footer-social {
-  flex: 1;
-  min-width: 200px;
+  width: 100%;
+  max-width: 350px; /* opcional, solo para que quede bonito */
 }
 
 .social-icon {
